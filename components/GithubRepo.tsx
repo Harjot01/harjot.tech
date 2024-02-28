@@ -24,7 +24,7 @@ const GithubRepo = () => {
 
                 {showMore && (
                     <>
-                        {GithubRepoData.slice(6).map((repo, index) => (
+                        {GithubRepoData.slice(6).map((repo) => {
 
                             <motion.div
                                 initial={{ opacity: 0 }}
@@ -32,10 +32,10 @@ const GithubRepo = () => {
                                 transition={{ delay: 0.1 + (count = count + 0.1) }}
                             >
 
-                                <RepoCard title={repo.title} desc={repo.desc} link={repo.link} key={index} />
+                                <RepoCard title={repo.title} desc={repo.desc} link={repo.link} key={repo.id} />
 
                             </motion.div>
-                        ))}
+                        })}
 
                     </>
                 )}
