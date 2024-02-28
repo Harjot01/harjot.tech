@@ -20,12 +20,11 @@ export default function Projects() {
 
 
 
-                {projectsData.slice(0, 3).map((project, index) => (
-                    <React.Fragment>
-                        <ProjectCard {...project} key={index} />
-                    </React.Fragment>
+                {projectsData.slice(0, 3).map((project) => {
 
-                ))}
+                    return <ProjectCard {...project} key={project.id} />
+
+                })}
 
                 <motion.a href="/projects"
                     className="flex gap-2 items-center text-2xl font-titleFont  text-textDarkGreen  dark:text-textGreen tracking-wide dark:hover:text-textLight duration-300"

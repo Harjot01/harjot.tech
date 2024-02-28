@@ -10,6 +10,7 @@ import PortfolioImg from "./images/priya-portfolio.png"
 import LeetcodeImg from "./images/Leetcode.png"
 import HackerrankImg from "./images/Hackerrank.png"
 import CFImg from "./images/CodeforcesImg.png"
+import AuthorImg from "./images/My image.jpg"
 
 
-export { logo, profileImg, amazonImg, cyberImg, noorShop, PongImg, PixisImg, AnicodeImg, PortfolioImg, LeetcodeImg, HackerrankImg, CFImg };
+export { logo, profileImg, amazonImg, cyberImg, noorShop, PongImg, PixisImg, AnicodeImg, PortfolioImg, LeetcodeImg, HackerrankImg, CFImg, AuthorImg };

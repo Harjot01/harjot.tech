@@ -20,12 +20,9 @@ const Projects = () => {
         <SectionTitle title="All Projects" />
 
         <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
-          {projectsData.map((project, index) => (
-            <React.Fragment>
-              <ProjectCard  key={index} {...project} />
-            </React.Fragment>
-
-          ))}
+          {projectsData.map((project) => {
+            return <ProjectCard key={project.id} {...project} />
+          })}
         </div>
 
       </div>

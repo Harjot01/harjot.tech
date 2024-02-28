@@ -23,11 +23,9 @@ const SkillsAndAchivements = () => {
         </div>
         <div className="max-w-[90vw]">
 
-          {AchievementsData.map((items, index) => (
-            <React.Fragment>
-              <Achievements key={index} {...items} />
-            </React.Fragment>
-          ))}
+          {AchievementsData.map((items) => {
+            return <Achievements key={items.id} {...items} />
+          })}
         </div>
       </div>
 

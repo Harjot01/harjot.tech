@@ -2,6 +2,8 @@
 import { motion, useInView } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import Image from "next/image";
+import { AuthorImg } from "@/public/assets";
 
 interface props {
     element: string
@@ -9,7 +11,7 @@ interface props {
 
 const Banner = () => {
     const [isHovered, setIsHovered] = useState(false)
-    
+
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true });
     let [count, setCount] = useState(0);
@@ -110,9 +112,7 @@ const Banner = () => {
                 transition={{ duration: 0.5, delay: 0.9 }}
 
             >
-                <img
-                    src="../assets/Images/My image.jpg" className="author-img rounded-full"
-                />
+                <Image src={AuthorImg} alt="author-img" className="rounded-full author-img" />
             </motion.div>
         </section>
     );

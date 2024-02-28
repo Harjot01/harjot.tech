@@ -12,7 +12,7 @@ import LeftSide from "@/components/LeftSide";
 import { useTheme } from "next-themes";
 
 export default function Education() {
-  const {  resolvedTheme } = useTheme()
+  const { resolvedTheme } = useTheme()
 
   return (
     <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
@@ -27,10 +27,10 @@ export default function Education() {
 
 
         <VerticalTimeline lineColor="">
-          {EducationData.map((item, index) => (
-            <React.Fragment>
+          {EducationData.map((item) => {
+            return <React.Fragment>
               <VerticalTimelineElement
-                key={index}
+                key={item.id}
                 visible={true}
                 contentStyle={{
                   background:
@@ -43,14 +43,14 @@ export default function Education() {
                 }}
                 contentArrowStyle={{
                   borderRight:
-                  resolvedTheme === 'dark' ? "0.4rem solid rgba(255, 255, 255, 0.5)" : "0.4rem solid rgba(0, 0, 0, 0.5)",
+                    resolvedTheme === 'dark' ? "0.4rem solid rgba(255, 255, 255, 0.5)" : "0.4rem solid rgba(0, 0, 0, 0.5)",
                 }}
                 date={item.date}
                 icon={item.icon}
                 iconStyle={{
                   background:
-                  resolvedTheme === 'dark' ?  "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.15)",
-                  color: resolvedTheme === 'dark' ?  "#78e2a0" : "#1e3851",
+                    resolvedTheme === 'dark' ? "rgba(255, 255, 255, 0.15)" : "rgba(0, 0, 0, 0.15)",
+                  color: resolvedTheme === 'dark' ? "#78e2a0" : "#1e3851",
                   fontSize: "1.5rem",
                 }}
               >
@@ -62,7 +62,7 @@ export default function Education() {
                 </p>
               </VerticalTimelineElement>
             </React.Fragment>
-          ))}
+          })}
 
         </VerticalTimeline>
       </div>

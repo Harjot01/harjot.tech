@@ -18,13 +18,9 @@ const GithubRepo = () => {
                 </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 lgl:px-10">
-                {GithubRepoData.slice(0, 6).map((repo, index) => (
-
-                    <React.Fragment>
-                        <RepoCard title={repo.title} key={index} desc={repo.desc} link={repo.link} />
-                    </React.Fragment>
-
-                ))}
+                {GithubRepoData.slice(0, 6).map((repo) => {
+                    return <RepoCard {...repo} key={repo.id} />
+                })}
 
                 {showMore && (
                     <>

@@ -10,7 +10,7 @@ import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: "Harjot Singh",
-  description: "Portfolio Website",
+  description: "Personal portfolio website using Next.js and Tailwind CSS",
 };
 
 export default function RootLayout({
