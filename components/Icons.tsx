@@ -1,9 +1,12 @@
 import * as React from "react";
 import PropTypes from "prop-types"
 
+interface props {
+    className: string
+    [key: string]: any
+}
 
-
-export const SunIcon = ({ className, ...rest }) => (
+export const SunIcon = ({ className, ...rest }: props) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -182,7 +185,7 @@ export const SunIcon = ({ className, ...rest }) => (
 );
 
 
-export const MoonIcon = ({ className, ...rest }) => (
+export const MoonIcon = ({ className, ...rest }: props) => (
     <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
