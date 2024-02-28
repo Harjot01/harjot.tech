@@ -1,8 +1,6 @@
 // app/components/ThemeSwitch.tsx
 'use client'
 
-import { FiSun, FiMoon } from "react-icons/fi"
-import { BiSun, BiMoon } from "react-icons/bi"
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
 import Image from "next/image"

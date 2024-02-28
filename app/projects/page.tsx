@@ -1,15 +1,6 @@
-import { amazonImg, cyberImg, noorShop } from "@/public/assets";
-import Image from "next/image";
-import { AiOutlineYoutube } from "react-icons/ai";
-import { TbBrandGithub } from "react-icons/tb";
 import SectionTitle from "@/components/SectionTitle";
-import { RxOpenInNewWindow } from "react-icons/rx";
 import Navbar from "@/components/Navbar";
-import Archive from "@/components/GithubRepo";
 import LeftSide from "@/components/LeftSide";
-import Link from "next/link";
-import { BsGithub } from "react-icons/bs";
-import corpcommentImg from "@/public/assets/images/amazonImg.png";
 import ProjectCard from "@/components/ProjectCard";
 import { projectsData } from "@/lib/data";
 import React from "react";

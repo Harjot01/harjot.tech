@@ -1,9 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 import { motion } from "framer-motion";
 import ThemeSwitch from "./ThemeSwitch";
 import { usePathname } from "next/navigation";

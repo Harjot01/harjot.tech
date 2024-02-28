@@ -1,8 +1,7 @@
 "use client";
-import { IoLogoGithub, IoLogoYoutube, IoLogoLinkedin, IoLogoInstagram, IoLogoSnapchat } from 'react-icons/io';
+import { IoLogoLinkedin, IoLogoInstagram } from 'react-icons/io';
 import { motion } from "framer-motion"
 import { FaGithub } from 'react-icons/fa';
-import { IoLinkOutline } from 'react-icons/io5';
 
 const LeftSide = () => {
     return (

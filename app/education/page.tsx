@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-// import SectionHeading from "./section-heading";
-import SectionTitle from "@/components/SectionTitle";
 import {
   VerticalTimeline,
   VerticalTimelineElement,

@@ -6,6 +6,29 @@ import { PongImg, PixisImg, AnicodeImg, PortfolioImg, LeetcodeImg, HackerrankImg
 
 
 
+export const links = [
+  {
+    name: "Home",
+    hash: "/"
+  },
+  {
+    name: "Projects",
+    hash: "/projects"
+  },
+  {
+    name: "Skills",
+    hash: "/skills"
+  },
+  {
+    name: "Education",
+    hash: "/education"
+  },
+  {
+    name: "Contact",
+    hash: "/#contact"
+  },
+  
+]
 
 
 export const projectsData = [

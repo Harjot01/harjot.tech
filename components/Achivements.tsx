@@ -3,8 +3,7 @@
 import { useRef } from "react";
 import { AchievementsData } from "@/lib/data";
 import Image from "next/image";
-import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
-import { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof AchievementsData)[number];
 

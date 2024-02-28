@@ -1,4 +1,7 @@
 import * as React from "react";
+import PropTypes from "prop-types"
+
+
 
 export const SunIcon = ({ className, ...rest }) => (
     <svg
@@ -177,6 +180,7 @@ export const SunIcon = ({ className, ...rest }) => (
         </circle>
     </svg>
 );
+
 
 export const MoonIcon = ({ className, ...rest }) => (
     <svg
