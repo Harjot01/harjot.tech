@@ -40,9 +40,9 @@ const ProjectCard = ({ projectLink, img, title, summary, tags, githubLink }: Pro
                 </p>
                 <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                     {/* Tags */}
-                    {tags.map((tag) => {
+                    {tags.map((tag, idx) => {
                         return (
-                            <li className="bg-white dark:bg-secondary rounded-xl md:px-2 md:py-1">{tag}</li>
+                            <li key={idx} className="bg-white dark:bg-secondary rounded-xl md:px-2 md:py-1">{tag}</li>
                         )
                     })}
 

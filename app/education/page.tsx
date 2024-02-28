@@ -28,9 +28,9 @@ export default function Education() {
 
         <VerticalTimeline lineColor="">
           {EducationData.map((item, index) => (
-            <React.Fragment key={index}>
+            <React.Fragment>
               <VerticalTimelineElement
-
+                key={index}
                 visible={true}
                 contentStyle={{
                   background:

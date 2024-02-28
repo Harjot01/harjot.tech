@@ -21,8 +21,8 @@ export default function Projects() {
 
 
                 {projectsData.slice(0, 3).map((project, index) => (
-                    <React.Fragment key={index}>
-                        <ProjectCard {...project} />
+                    <React.Fragment>
+                        <ProjectCard {...project} key={index} />
                     </React.Fragment>
 
                 ))}

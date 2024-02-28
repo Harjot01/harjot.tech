@@ -21,8 +21,8 @@ const Projects = () => {
 
         <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
           {projectsData.map((project, index) => (
-            <React.Fragment key={index}>
-              <ProjectCard {...project} />
+            <React.Fragment>
+              <ProjectCard  key={index} {...project} />
             </React.Fragment>
 
           ))}
