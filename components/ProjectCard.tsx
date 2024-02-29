@@ -26,7 +26,7 @@ const ProjectCard = ({ projectLink, img, title, summary, tags, githubLink }: Pro
                     <Image
                         className="w-full h-full transition-all duration-500 hover:scale-105 object-cover"
                         src={img}
-                        alt="amazonImg"
+                        alt="Project Image"
                     />
 
                 </div>
@@ -53,14 +53,14 @@ const ProjectCard = ({ projectLink, img, title, summary, tags, githubLink }: Pro
                         href={githubLink}
                         target="_blank"
                     >
-                        <TbBrandGithub />
+                        <TbBrandGithub aria-label="Github Icon" />
                     </a>
                     <a
                         className="hover:text-textDarkGreen dark:hover:text-textGreen duration-300"
                         href={projectLink}
                         target="_blank"
                     >
-                        <RxOpenInNewWindow />
+                        <RxOpenInNewWindow aria-label="Open In New Window Icon" />
                     </a>
                 </div>
             </div>

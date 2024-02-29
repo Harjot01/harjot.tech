@@ -1,6 +1,4 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
 import { LuGraduationCap, LuSchool2 } from "react-icons/lu";
 import { PongImg, PixisImg, AnicodeImg, PortfolioImg, LeetcodeImg, HackerrankImg, CFImg } from "@/public/assets";
 
@@ -145,7 +143,7 @@ export const GithubRepoData = [
 export const AchievementsData = [
   {
     title: "Leetcode",
-    desc: "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+    desc: "I began solving LeetCode problems in September 2023. Currently, I've successfully completed over 200 problems. I've decided to take part in LeetCode contests regularly.",
     imageUrl: LeetcodeImg,
     id: 1
   },

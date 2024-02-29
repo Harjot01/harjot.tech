@@ -11,7 +11,7 @@ const Navbar = () => {
   const ref = useRef<string | any>("");
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     e.preventDefault();
-    
+
     const href = e.currentTarget.href;
     const targetId = href.replace(/.*\#/, "");
     const elem = document.getElementById(targetId);
@@ -44,11 +44,12 @@ const Navbar = () => {
         </Link>
         {/* ============ Logo End here ============== */}
         {/* ============ ListItem Start here ======== */}
-        <div className="mdl:inline-flex items-center gap-7 mx-auto bg-white dark:bg-secondary shadow-xl rounded-full py-3 md:py-3">
-          <ul className="end:px-0 max-w-[90vw] flex gap-10 px-3 text-[15px] sm:px-10 sm:space-x-16 sm:text-md smsl:space-x-6 smsl:px-6 sml:text-md sml:space-x-16 sml:px-12 md:px-8 md:space-x-0 md:text-lg  lg:text-lg lg:gap-16 text-secondary dark:text-white overflow-hidden">
+        <div className="flex items-center max-w-[95vw] text-secondary dark:text-white gap-7 mx-auto bg-white dark:bg-secondary shadow-xl rounded-full py-3 md:py-3 pl-6 pr-6">
+          <ul className="flex text-[9px] space-x-[7vw] xs:text-xs  sm:text-sm sm:space-x-[8vw] sml:text-md sml:space-x-[14vw]  md:text-md md:space-x-[8vw] lg:text-lg lg:space-x-[5vw] overflow-hidden">
+
 
             <Link
-              className={`flex items-center gap-1  font-medium hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/' ? "text-textGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
+              className={`flex items-center gap-1  font-medium  hover:text-textDarkGreen dark:hover:text-textGreen cursor-pointer duration-300 nav-link ${currentRoute === '/' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
               href="/"
 
             >
@@ -61,7 +62,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
             <Link
-              className={`flex items-center gap-1  font-medium hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/projects' ? "text-textGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
+              className={`flex items-center gap-1  font-medium hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/projects' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
               href="/projects"
 
             >
@@ -74,7 +75,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
             <Link
-              className={`flex items-center gap-1  font-medium hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/skills' ? "text-textGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
+              className={`flex items-center gap-1  font-medium hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/skills' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
               href="/skills"
 
             >
@@ -87,7 +88,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
             <Link
-              className={`flex items-center gap-1  font-medium hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/education' ? "text-textGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
+              className={`flex items-center gap-1  font-medium hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/education' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
               href="/education"
 
             >
@@ -100,7 +101,7 @@ const Navbar = () => {
               </motion.li>
             </Link>
             <Link
-              className={`flex items-center gap-1  font-medium hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#contact' ? "text-textGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
+              className={`invisible md:visible flex items-center gap-1  font-medium hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#contact' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
               href="/#contact"
               onClick={handleScroll}
 

@@ -100,19 +100,19 @@ const Banner = () => {
 
                         >
                             Resume
-                            {isHovered ? <FaArrowRight className="transition-all duration-300 transform -rotate-45" /> : <FaArrowRight className="transition-all duration-300" />}
+                            {isHovered ? <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300 transform -rotate-45" /> : <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300" />}
                         </motion.button>
                     </a>
                 </div>
             </div>
             <motion.div
-                className="xl:h-full xl:w-[38rem] lg:h-full lg:w-[32rem]  md:h-full md:w-[22rem] h-full w-[19rem]  bg-cover mb-12 mx-auto -mt-10"
+                className="xl:h-full xl:w-[38rem] lg:h-full lg:w-[32rem]  md:h-full md:w-[22rem] sm:w-[18rem] h-full w-[14rem]  bg-cover mb-12 mx-auto lg:-mt-10"
                 initial={{ y: 0, opacity: 0 }}
                 animate={{ y: 10, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 }}
 
             >
-                <Image src={AuthorImg} alt="author-img" className="rounded-full author-img" />
+                <Image src={AuthorImg} loading="eager" alt="author-img" className="rounded-full author-img" />
             </motion.div>
         </section>
     );

@@ -11,9 +11,12 @@ const Projects = () => {
     <section className="">
       <Navbar />
       <div className="max-w-[90vw] lgl:px-20 py-24 mx-auto">
-        <h2 className="font-titleFont mb-24 text-5xl font-semibold text-secondary dark:text-textLight flex flex-col items-center">Projects</h2>
+        
+        <h2 className="text-5xl mb-24 font-bold text-secondary dark:text-textLight text-center">Projects</h2>
+        {/* <p className="font-medium my-6 w-full lgl:w-[50vw] text-md text-secondary dark:text-textLight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cupiditate expedita dolorum aliquid commodi sed modi necessitatibus eos et eius?</p> */}
+
         <div
-          className="hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0"
+          className="hidden  xl:inline-flex w-32 h-full fixed left-0 bottom-0"
         >
           <LeftSide />
         </div>

@@ -33,7 +33,7 @@ const RepoCard = ({ title, desc, link }: Props) => {
                     onHoverEnd={() => setIsHovered(false)}
                 >
                     View repository
-                    {isHovered ? <FaArrowRight className="transition-all duration-300 transform -rotate-45" /> : <FaArrowRight className="transition-all duration-300" />}
+                    {isHovered ? <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300 transform -rotate-45" /> : <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300" />}
                 </motion.button>
             </a>
         </div>

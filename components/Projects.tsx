@@ -1,5 +1,4 @@
 "use client";
-import { amazonImg, cyberImg, noorShop } from "@/public/assets";
 import SectionTitle from "./SectionTitle";
 import { FaArrowRight } from "react-icons/fa"
 import { motion } from "framer-motion"
@@ -33,7 +32,7 @@ export default function Projects() {
                 >
                     View All
 
-                    {isHovered ? <FaArrowRight className="transition-all duration-300 transform -rotate-45" /> : <FaArrowRight className="transition-all duration-300" />}
+                    {isHovered ? <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300 transform -rotate-45" /> : <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300" />}
 
                 </motion.a>
                 {/* ============ projects End here ================== */}

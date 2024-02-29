@@ -26,7 +26,7 @@ const GithubRepo = () => {
                     <>
                         {GithubRepoData.slice(6).map((repo) => {
 
-                            <motion.div
+                            return <motion.div
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.1 + (count = count + 0.1) }}
