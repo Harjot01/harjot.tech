@@ -30,9 +30,10 @@ const GithubRepo = () => {
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.1 + (count = count + 0.1) }}
+                                key={repo.id}
                             >
 
-                                <RepoCard title={repo.title} desc={repo.desc} link={repo.link} key={repo.id} />
+                                <RepoCard title={repo.title} desc={repo.desc} link={repo.link} />
 
                             </motion.div>
                         })}
