@@ -86,7 +86,7 @@ const Banner = () => {
                     transition={{ duration: 0.5, delay: 0.8 }}
                     className="text-base md:max-w-[650px] text-black dark:text-white font-medium mt-6"
                 >
-                    I&apos;m a Computer Science undergraduate student at <a className="text-red-500" href="https://www.cuchd.in/" target="_blank">Chandigarh University</a>, with a keen interest in web & game development. I have undertaken several projects in these domains, showcasing my enthusiasm for building innovative solutions. Currently, my main emphasis is on solving Data Structures and Algorithms problems on platforms like <a className="text-textDarkGreen dark:text-textGreen" href="https://leetcode.com/harjot01/" target="_blank">Leetcode</a>.
+                    I&apos;m a Computer Science undergraduate student at <a className="text-red-500" href="https://www.cuchd.in/" target="_blank">Chandigarh University</a>, with a keen interest in web & game development. I have undertaken several projects in these domains, showcasing my enthusiasm for building innovative solutions. Currently, my main emphasis is on solving Data Structures & Algorithms problems on platforms like <a className="text-textDarkGreen dark:text-textGreen" href="https://leetcode.com/harjot01/" target="_blank">Leetcode</a>.
                 </motion.p>
                 <div className="space-x-4">
                     <a href="../assets/Harjot Singh Resume.pdf" target="_blank">

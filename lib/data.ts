@@ -43,7 +43,8 @@ export const projectsData = [
     tags: ["Godot", "GDScript"],
     githubLink: "https://github.com/Harjot01",
     img: PongImg,
-    id: 1
+    id: 1,
+    featured: true
   },
   {
     title: "Pixis Media Solutions",
@@ -53,7 +54,8 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind", "Sanity.io"],
     githubLink: "https://github.com/Harjot01",
     img: PixisImg,
-    id: 2
+    id: 2,
+    featured: true
   },
   {
     title: "Anicode - Coding Through Animations",
@@ -63,7 +65,8 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind", "Sanity.io"],
     githubLink: "https://github.com/Harjot01",
     img: AnicodeImg,
-    id: 3
+    id: 3,
+    featured: true
   },
   {
     title: "Personal Portfolio Website",
@@ -73,7 +76,8 @@ export const projectsData = [
     tags: ["React", "Next.js", "Tailwind", "Sanity.io"],
     githubLink: "https://github.com/Harjot01",
     img: PortfolioImg,
-    id: 4
+    id: 4,
+    featured: false
   },
 
 

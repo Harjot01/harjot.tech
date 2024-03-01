@@ -20,7 +20,7 @@ export default function Achievements({
 
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-
+  console.log("scrollYProgress:", scrollYProgress); 
 
 
   return (

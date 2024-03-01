@@ -13,7 +13,7 @@ export default function Projects() {
     const [isHovered, setIsHovered] = useState(false)
     return (
         <section className="max-w-container mx-auto lgl:px-20 py-24 text-secondary dark:text-textLight">
-            <SectionTitle title="Featured Projects" />
+            <SectionTitle title="Some Projects I Have Built" />
             {/* ============ projects Start here ================ */}
             <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
 
