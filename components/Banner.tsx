@@ -36,7 +36,7 @@ const Banner = () => {
     return (
         <section
             id="home"
-            className="max-w-contentContainer mx-auto py-10 mdl:pt-28 flex flex-col-reverse lg:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-0 justify-between"
+            className="max-w-contentContainer mx-auto mt-28 lg:mt-48 flex flex-col-reverse lg:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-0 justify-between"
         >
             <div className="w-full  text-left ">
                 <motion.h1

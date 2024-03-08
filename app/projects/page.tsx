@@ -8,7 +8,7 @@ import React from "react";
 const Projects = () => {
   return (
     <section className="">
-      <div className="max-w-[90vw] lgl:px-20 py-24 mx-auto">
+      <div className="max-w-[90vw] lgl:px-20 mt-32 lg:mt-48 mx-auto">
         
         <h2 className="text-5xl mb-24 font-bold text-secondary dark:text-textLight text-center">Projects</h2>
         {/* <p className="font-medium my-6 w-full lgl:w-[50vw] text-md text-secondary dark:text-textLight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cupiditate expedita dolorum aliquid commodi sed modi necessitatibus eos et eius?</p> */}

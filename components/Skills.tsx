@@ -25,7 +25,7 @@ const Skill = ({ name, x, y }: Props) => {
 const Skills = () => {
     return (
         <>
-            <div className=" mx-auto lgl:px-20 py-24 flex flex-col items-center">
+            <div className=" mx-auto lgl:px-20 mt-28 lg:mt-48 flex flex-col items-center">
 
                 <h2 className="font-titleFont text-5xl font-semibold text-secondary dark:text-textLight">Skills</h2>
                 <div className='w-full mt-8 xl:h-screen relative flex items-center justify-center rounded-full bg-circularLight dark:bg-circularDark lgl:h-[80vh] sml:h-[60vh] sm:h-[50vh] 

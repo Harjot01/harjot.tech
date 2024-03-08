@@ -15,9 +15,7 @@ export default function Education() {
 
   return (
     <section id="experience" className="">
-      <div className="max-w-[90vw] lgl:px-20 py-24 mx-auto">
-
-
+      <div className="max-w-[90vw] lgl:px-20 mt-28 lg:mt-48 mx-auto">
         <h2 className="text-5xl font-bold text-secondary dark:text-textLight text-center">Education</h2>
         {/* <p className="font-medium my-6 w-full lgl:w-[50vw] text-md text-secondary dark:text-textLight">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel cupiditate expedita dolorum aliquid commodi sed modi necessitatibus eos et eius?</p>
         <p className="font-medium my-6 mb-20 w-full lgl:w-[50vw] text-md text-secondary dark:text-textLight">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit repudiandae necessitatibus, ex quo sit labore molestias maiores deleniti accusamus maxime odit quia ullam fugit sunt saepe odio, iusto eveniet ab!</p> */}
