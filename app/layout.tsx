@@ -7,6 +7,7 @@ const montserrat = Montserrat({
   variable: "--font-mont"
 });
 import { Providers } from './providers'
+import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
   title: "Harjot Singh",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={`${montserrat.className}  bg-lightMode dark:bg-primary transition-all duration-500`}>
         <Providers>
           <ActiveSectionContextProvider>
+            <Navbar />
             {children}
           </ActiveSectionContextProvider>
         </Providers>

@@ -7,7 +7,6 @@ import {
 } from "react-vertical-timeline-component";
 import 'react-vertical-timeline-component/style.min.css';
 import { EducationData } from "@/lib/data";
-import Navbar from "@/components/Navbar"
 import LeftSide from "@/components/LeftSide";
 import { useTheme } from "next-themes";
 
@@ -16,7 +15,6 @@ export default function Education() {
 
   return (
     <section id="experience" className="">
-      <Navbar />
       <div className="max-w-[90vw] lgl:px-20 py-24 mx-auto">
 
 

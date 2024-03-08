@@ -1,5 +1,4 @@
 import SectionTitle from "@/components/SectionTitle";
-import Navbar from "@/components/Navbar";
 import LeftSide from "@/components/LeftSide";
 import ProjectCard from "@/components/ProjectCard";
 import { projectsData } from "@/lib/data";
@@ -9,7 +8,6 @@ import React from "react";
 const Projects = () => {
   return (
     <section className="">
-      <Navbar />
       <div className="max-w-[90vw] lgl:px-20 py-24 mx-auto">
         
         <h2 className="text-5xl mb-24 font-bold text-secondary dark:text-textLight text-center">Projects</h2>

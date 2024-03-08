@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import LeftSide from "@/components/LeftSide";
 import Skills from "@/components/Skills";
 import Achievements from "@/components/Achivements";
@@ -12,7 +11,6 @@ const SkillsAndAchivements = () => {
   return (
     <section className="max-w-container mx-auto ">
       {/* <TransitionEffect /> */}
-      <Navbar />
       <Skills />
       <div className=" mx-auto lgl:px-20 py-24 flex flex-col items-center">
         <h2 className="font-titleFont mb-24 text-5xl font-semibold text-secondary dark:text-textLight">Platforms</h2>
