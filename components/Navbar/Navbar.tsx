@@ -50,7 +50,7 @@ const Navbar = () => {
         </Link>
         {/* ============ Logo End here ============== */}
         {/* ============ ListItem Start here ======== */}
-        <nav className={`fixed z-50 max-w-[95vw] text-secondary dark:text-white rounded-full py-4 px-6  ${scrollActive ? "dark:bg-secondary transition-all duration-500" : "bg-transparent transition-all duration-500"}`}>
+        <nav className={`fixed z-50 max-w-[95vw] text-secondary dark:text-white rounded-full py-4 px-6  ${scrollActive ? "dark:bg-secondary bg-lightMode transition-all duration-500" : "bg-transparent transition-all duration-500"}`}>
           <ul className="flex gap-10 sm:gap-14 smsl:gap-20 md:text-lg text-sm">
 
 

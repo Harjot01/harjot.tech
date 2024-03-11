@@ -47,7 +47,7 @@ const Tech = () => {
             <ul className="flex flex-wrap justify-center gap-4 text-lg  text-gray-800">
                 {skillsData.map((skill, index) => (
                     <motion.li
-                        className={`bg-white  borderBlack rounded-full text-md px-5 py-1 dark:bg-white/10 dark:text-white/80 ${skill === highlightedSkill ? 'bg-textGreen text-white dark:bg-textGreen duration-700' : ''}`}
+                        className={`  borderBlack rounded-full text-md px-5 py-1  ${skill === highlightedSkill ? 'bg-textDarkGreen text-white dark:bg-textDarkGreen duration-700' : 'dark:bg-white/10 dark:text-white/80 bg-lightMode'}`}
                         key={index}
                         variants={fadeInAnimationVariants}
                         initial="initial"

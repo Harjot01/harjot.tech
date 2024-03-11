@@ -14,7 +14,7 @@ const GithubRepo = () => {
     return (
         <div className="max-w-contentContainer mx-auto px-4 py-24">
             <div className="w-full flex flex-col items-center">
-                <SectionTitle title="Latest Code" />
+                <SectionTitle title="LATEST CODE" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 lgl:px-10">
                 {GithubRepoData.slice(0, 6).map((repo) => {

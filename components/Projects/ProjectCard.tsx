@@ -39,14 +39,14 @@ const ProjectCard = ({ projectLink, img, title, summary, tags, githubLink, featu
                     </p>}
                     <h3 className="text-2xl font-bold">{title}</h3>
                 </div>
-                <p className="bg-white text-[#004466] dark:bg-secondary dark:text-textLight text-sm md:text-base p-2 md:p-6 rounded-md">
+                <p className="bg-lightMode text-[#004466] dark:bg-secondary dark:text-textLight text-sm md:text-base p-2 md:p-6 rounded-md">
                     {summary}
                 </p>
                 <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
                     {/* Tags */}
                     {tags.map((tag, idx) => {
                         return (
-                            <li key={idx} className="bg-white dark:bg-secondary rounded-xl md:px-2 md:py-1">{tag}</li>
+                            <li key={idx} className="bg-lightMode dark:bg-secondary rounded-xl md:px-2 md:py-1">{tag}</li>
                         )
                     })}
 

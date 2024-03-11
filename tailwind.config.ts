@@ -28,7 +28,7 @@ const config: Config = {
       colors: {
         primary: "#0d2438",
         secondary: "#1e3851",
-        lightMode: "#fbf8f3",
+        lightMode: "#ECEFF1",
         textGreen: "#78e2a0",
         textDarkGreen: "#04aa6d",
         textLight: "#ccd6f6",

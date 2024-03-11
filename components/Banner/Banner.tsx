@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import Image from "next/image";
 import { AuthorImg } from "@/public/assets";
+import Link from "next/link";
 
 interface props {
     element: string
@@ -88,8 +89,8 @@ const Banner = () => {
                 >
                     I&apos;m a Computer Science undergraduate student at <a className="text-red-500" href="https://www.cuchd.in/" target="_blank">Chandigarh University</a>, with a keen interest in web & game development. I have undertaken several projects in these domains, showcasing my enthusiasm for building innovative solutions. Currently, my main emphasis is on solving Data Structures & Algorithms problems on platforms like <a className="text-textDarkGreen dark:text-textGreen" href="https://leetcode.com/harjot01/" target="_blank">Leetcode</a>.
                 </motion.p>
-                <div className="space-x-4">
-                    <a href="../assets/Harjot Singh Resume.pdf" target="_blank">
+                <div className="inline-block">
+                    <Link href="../assets/Harjot Singh Resume.pdf" target="_blank">
                         <motion.button
                             initial={{ y: 10, opacity: 0 }}
                             animate={{ y: 0, opacity: 1 }}
@@ -102,7 +103,7 @@ const Banner = () => {
                             Resume
                             {isHovered ? <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300 transform -rotate-45" /> : <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300" />}
                         </motion.button>
-                    </a>
+                    </Link>
                 </div>
             </div>
             <motion.div

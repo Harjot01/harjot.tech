@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function Projects() {
     const [isHovered, setIsHovered] = useState(false)
     return (
-        <section className="max-w-container mx-auto  lgl:px-20 lgl:py-12  text-secondary dark:text-textLight">
+        <section className="max-w-container mx-auto  lgl:px-20 py-12 lgl:py-0 text-secondary dark:text-textLight">
             <SectionTitle title="PROJECTS" />
             {/* ============ projects Start here ================ */}
             <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">

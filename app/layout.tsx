@@ -23,7 +23,7 @@ export default function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.className}  bg-lightMode dark:bg-primary transition-all duration-500`}>
+      <body className={`${montserrat.className}  bg-white dark:bg-primary transition-all duration-500`}>
         <Providers>
           <ActiveSectionContextProvider>
             <Navbar />
