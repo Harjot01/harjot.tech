@@ -17,7 +17,7 @@ const Banner = () => {
     let [count, setCount] = useState(0);
     const [text] = useState([
         "develop websites using Next.js",
-        "solve DSA questions",
+        "solve DSA problems",
         "develop 2D games",
     ]);
 
@@ -36,9 +36,9 @@ const Banner = () => {
     return (
         <section
             id="home"
-            className="max-w-contentContainer mx-auto mt-28 lg:mt-48 flex flex-col-reverse lg:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-0 justify-between"
+            className="max-w-contentContainer mx-auto md:my-20 lg:my-28 flex flex-col-reverse lg:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-0 justify-between"
         >
-            <div className="w-full  text-left ">
+            <div className="w-full text-left ">
                 <motion.h1
                     initial={{ y: 10, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
@@ -106,7 +106,7 @@ const Banner = () => {
                 </div>
             </div>
             <motion.div
-                className="xl:h-full xl:w-[38rem] lg:h-full lg:w-[32rem]  md:h-full md:w-[22rem] sm:w-[18rem] h-full w-[14rem]  bg-cover mb-12 mx-auto lg:-mt-10"
+                className="xl:h-full xl:w-[34rem] lg:h-full lg:w-[32rem]  md:h-full md:w-[22rem] sm:w-[18rem] h-full w-[14rem]  bg-cover mb-12 mx-auto lg:-mt-10"
                 initial={{ y: 0, opacity: 0 }}
                 animate={{ y: 10, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.9 }}

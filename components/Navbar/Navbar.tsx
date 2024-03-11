@@ -1,12 +1,18 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import ThemeSwitch from "./ThemeSwitch";
+import ThemeSwitch from "../ThemeSwitcher/ThemeSwitch";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const [scrollActive, setScrollActive] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setScrollActive(window.scrollY > 20);
+    });
+  }, []);
   const currentRoute = usePathname();
   const ref = useRef<string | any>("");
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -28,9 +34,9 @@ const Navbar = () => {
 
 
   return (
-    <div className="w-full h-20 lg:h-[12vh] fixed top-0  z-50 px-4">
+    <div className="w-full h-20 lg:h-[12vh] top-0 px-4">
 
-      <div className="max-w-container h-full mx-auto py-1 font-titleFont flex items-center mdl:justify-center justify-between">
+      <div className="max-w-container h-full font-titleFont flex items-center justify-center">
         {/* ============ Logo Start here ============ */}
         <Link href="/">
           <motion.div
@@ -44,12 +50,12 @@ const Navbar = () => {
         </Link>
         {/* ============ Logo End here ============== */}
         {/* ============ ListItem Start here ======== */}
-        <div className="flex items-center max-w-[95vw] text-secondary dark:text-white gap-7 mx-auto bg-white dark:bg-secondary shadow-xl rounded-full py-3 md:py-3 pl-6 pr-6">
-          <ul className="flex text-[10px] space-x-[7vw] xs:text-xs sm:text-sm sm:space-x-[7vw] smsl:text-sm smsl:space-x-[10vw] sml:text-md sml:space-x-[14vw]  md:text-md md:space-x-[8vw] lg:text-lg lg:space-x-[5vw] overflow-hidden">
+        <nav className={`fixed z-50 max-w-[95vw] text-secondary dark:text-white rounded-full py-4 px-6  ${scrollActive ? "dark:bg-secondary transition-all duration-500" : "bg-transparent transition-all duration-500"}`}>
+          <ul className="flex gap-10 sm:gap-14 smsl:gap-20 md:text-lg text-sm">
 
 
             <Link
-              className={`flex items-center gap-1  font-medium  hover:text-textDarkGreen dark:hover:text-textGreen cursor-pointer duration-300 nav-link ${currentRoute === '/' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
+              className={`flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen cursor-pointer duration-300 nav-link ${currentRoute === '/' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
               href="/"
 
             >
@@ -58,12 +64,12 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.1 }}
               >
-                Home
+                HOME
               </motion.li>
             </Link>
             <Link
-              className={`flex items-center gap-1  font-medium hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/projects' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
-              href="/projects"
+              className={`hidden mdl:flex items-center gap-1   hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '#tech' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+              href="#tech"
 
             >
               <motion.li
@@ -71,12 +77,12 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.2 }}
               >
-                Projects
+                TECH
               </motion.li>
             </Link>
             <Link
-              className={`flex items-center gap-1  font-medium hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/skills' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
-              href="/skills"
+              className={`flex items-center gap-1   hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/projects' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+              href="/projects"
 
             >
               <motion.li
@@ -84,12 +90,13 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.3 }}
               >
-                Skills
+                PROJECTS
               </motion.li>
             </Link>
+            
             <Link
-              className={`flex items-center gap-1  font-medium hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/education' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
-              href="/education"
+              className={`flex items-center gap-1   hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/blogs' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+              href="/blogs"
 
             >
               <motion.li
@@ -97,11 +104,11 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.4 }}
               >
-                Education
+                BLOG
               </motion.li>
             </Link>
             <Link
-              className={`invisible md:visible flex items-center gap-1  font-medium hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#contact' ? "text-textDarkGreen dark:text-textGreen" : "text-secondary dark:text-white"}`}
+              className={`hidden mdl:flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#contact' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
               href="/#contact"
               onClick={handleScroll}
 
@@ -111,14 +118,14 @@ const Navbar = () => {
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.1, delay: 0.5 }}
               >
-                Contact
+                CONTACT
               </motion.li>
             </Link>
 
 
           </ul>
-        </div>
-        <div className="fixed bottom-3 right-3 mdl:top-6 mdl:right-12">
+        </nav>
+        <div className="fixed bottom-3 right-3 lg:top-6 lg:right-12">
           <ThemeSwitch />
         </div>
 

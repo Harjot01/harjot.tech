@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import LeftSide from "@/components/SocialLinks/LeftSide";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont"
 });
 import { Providers } from './providers'
-import Navbar from "@/components/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 
 export const metadata: Metadata = {
   title: "Harjot Singh",
@@ -26,6 +27,11 @@ export default function RootLayout({
         <Providers>
           <ActiveSectionContextProvider>
             <Navbar />
+            <div
+              className="hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0"
+            >
+              <LeftSide />
+            </div>
             {children}
           </ActiveSectionContextProvider>
         </Providers>

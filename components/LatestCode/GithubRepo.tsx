@@ -5,6 +5,7 @@ import RepoCard from "./RepoCard";
 import { motion } from "framer-motion";
 import { GithubRepoData } from "@/lib/data";
 import React from "react";
+import SectionTitle from "../SectionTitle";
 
 const GithubRepo = () => {
     const [showMore, setShowMore] = useState(false);
@@ -13,9 +14,7 @@ const GithubRepo = () => {
     return (
         <div className="max-w-contentContainer mx-auto px-4 py-24">
             <div className="w-full flex flex-col items-center">
-                <h2 className="text-3xl font-titleFont font-semibold text-secondary dark:text-textLight">
-                    Latest Code
-                </h2>
+                <SectionTitle title="Latest Code" />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 lgl:px-10">
                 {GithubRepoData.slice(0, 6).map((repo) => {

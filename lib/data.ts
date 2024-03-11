@@ -144,58 +144,29 @@ export const GithubRepoData = [
 
 ] as const;
 
-export const AchievementsData = [
-  {
-    title: "Leetcode",
-    desc: "I began solving LeetCode problems in September 2023. Currently, I've successfully completed over 200 problems. I've decided to take part in LeetCode contests regularly.",
-    imageUrl: LeetcodeImg,
-    id: 1
-  },
-  {
-    title: "Codeforces",
-    desc: "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    imageUrl: CFImg,
-    id: 2
-  },
-  {
-    title: "Hackerrank",
-    desc: "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    imageUrl: HackerrankImg,
-    id: 3
-  }
-
-]
-
-export const EducationData = [
-  {
-    title: "Bachelor of Engineering",
-    institution: "Chandigarh University",
-    location: "Mohali, India",
-    description:
-      "Pursuing my Bachelor of Technology in Computer Science and Engineering.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2021 - Present",
-    id: 1
-  },
-  {
-    title: "High School",
-    institution: "Lawrance Public School",
-    location: "Mohali, India",
-    description:
-      "Completed my high school with 83% marks.",
-    icon: React.createElement(LuSchool2),
-    date: "2008 - 2021",
-    id: 2
-  },
-  {
-    title: "Secondary School",
-    institution: "Lawrance Public School",
-    location: "Mohali, India",
-    description:
-      "Completed my secondary education with 87.2% marks.",
-    icon: React.createElement(LuSchool2),
-    date: "2008 - 2021",
-    id: 3
-  },
+export const skillsData = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Node.js",
+  "Git",
+  "Tailwind",
+  "Prisma",
+  "MongoDB",
+  "Redux",
+  "GraphQL",
+  "Apollo",
+  "Express",
+  "PostgreSQL",
+  "Python",
+  "Django",
+  "Framer Motion",
+  "C++",
+  "Java",
+  "React.js",
+  "Godot",
 
 ] as const;
