@@ -68,8 +68,9 @@ const Navbar = () => {
               </motion.li>
             </Link>
             <Link
-              className={`hidden mdl:flex items-center gap-1   hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '#tech' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
-              href="#tech"
+              className={`hidden mdl:flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#tech' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+              href="/#tech"
+              onClick={handleScroll}
 
             >
               <motion.li
