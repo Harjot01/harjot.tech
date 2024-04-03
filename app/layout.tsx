@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import LeftSide from "@/components/SocialLinks/LeftSide";
-import ActiveSectionContextProvider from "@/context/active-section-context";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont"
@@ -30,7 +29,6 @@ const RootLayout = async ({
     <html lang="en" suppressHydrationWarning>
       <body className={`${montserrat.className}  bg-white dark:bg-primary transition-all duration-500`}>
         <Providers>
-          <ActiveSectionContextProvider>
             <Navbar />
             <div
               className="hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0"
@@ -38,7 +36,6 @@ const RootLayout = async ({
               <LeftSide socialLink={socialLink} />
             </div>
             {children}
-          </ActiveSectionContextProvider>
         </Providers>
       </body>
     </html>
