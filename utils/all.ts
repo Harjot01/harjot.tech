@@ -1,8 +1,8 @@
-export const cx = (...classNames) =>
+export const cx = (...classNames: (string | boolean)[]) =>
   classNames.filter(Boolean).join(" ");
 
 // because we use sanity-next-image
 // vercel throws error when using normal imports
-export const myLoader = ({ src }) => {
+export const myLoader = (src: any) => {
   return src;
 };

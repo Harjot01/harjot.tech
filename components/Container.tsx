@@ -1,6 +1,7 @@
 import { cx } from "@/utils/all";
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode } from "react";
 
-export default function Container({ props }: any) {
+export default function Container(props: { large: any; alt: any; className: any; children: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | PromiseLikeOfReactNode | null | undefined; }) {
   return (
     <div
       className={cx(
@@ -10,6 +11,6 @@ export default function Container({ props }: any) {
         props.className
       )}>
       {props.children}
-    </div>
+    </div>  
   );
 }
