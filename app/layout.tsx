@@ -9,18 +9,23 @@ const montserrat = Montserrat({
 });
 import { Providers } from './providers'
 import Navbar from "@/components/Navbar/Navbar";
+import { fetchSocialLinksData } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Harjot Singh",
-  description: "Personal portfolio website using Next.js and Tailwind CSS",
+  title: {
+      default: "Harjot Singh",
+      template: "Harjot Singh | %s",
+  },
+  description: "Personal portfolio website"
 };
 
-export default function RootLayout({
+const RootLayout = async ({
   children,
 }: Readonly<{
   children: React.ReactNode;
-}>) {
+}>) => {
 
+  const socialLink = await fetchSocialLinksData();
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${montserrat.className}  bg-white dark:bg-primary transition-all duration-500`}>
@@ -30,7 +35,7 @@ export default function RootLayout({
             <div
               className="hidden xl:inline-flex w-32 h-full fixed left-0 bottom-0"
             >
-              <LeftSide />
+              <LeftSide socialLink={socialLink} />
             </div>
             {children}
           </ActiveSectionContextProvider>
@@ -39,3 +44,5 @@ export default function RootLayout({
     </html>
   );
 }
+
+export default RootLayout

@@ -7,30 +7,14 @@ import ThemeSwitch from "../ThemeSwitcher/ThemeSwitch";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const currentRoute = usePathname();
   const [scrollActive, setScrollActive] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
       setScrollActive(window.scrollY > 20);
     });
   }, []);
-  const currentRoute = usePathname();
-  const ref = useRef<string | any>("");
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
 
-    const href = e.currentTarget.href;
-    const targetId = href.replace(/.*\#/, "");
-    const elem = document.getElementById(targetId);
-    elem?.scrollIntoView({
-      behavior: "smooth",
-    });
-    // Update the class name of the clicked link
-    const links = document.querySelectorAll(".nav-link");
-    links.forEach((link) => {
-      link.classList.remove("active");
-    });
-    e.currentTarget.classList.add("active");
-  };
 
 
   return (
@@ -53,75 +37,73 @@ const Navbar = () => {
         <nav className={`fixed z-50 max-w-[95vw] text-secondary dark:text-white rounded-full py-4 px-6  ${scrollActive ? "dark:bg-secondary bg-lightMode transition-all duration-500" : "bg-transparent transition-all duration-500"}`}>
           <ul className="flex gap-10 sm:gap-14 smsl:gap-20 md:text-lg text-sm">
 
-
-            <Link
-              className={`flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen cursor-pointer duration-300 nav-link ${currentRoute === '/' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
-              href="/"
-
+            <motion.li
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.1, delay: 0.1 }}
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.1, delay: 0.1 }}
+              <Link
+                className={`flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen cursor-pointer duration-300 nav-link ${currentRoute === '/' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+                href="/"
+
               >
                 HOME
-              </motion.li>
-            </Link>
-            <Link
-              className={`hidden mdl:flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#tech' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
-              href="/#tech"
-              onClick={handleScroll}
+              </Link>
+            </motion.li>
+            <motion.li
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.1, delay: 0.2 }}
 
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.1, delay: 0.2 }}
+              <Link
+                className={`hidden mdl:flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#tech' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+                href="/#tech"
+
               >
                 TECH
-              </motion.li>
-            </Link>
-            <Link
-              className={`flex items-center gap-1   hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/projects' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
-              href="/projects"
-
+              </Link>
+            </motion.li>
+            <motion.li
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.1, delay: 0.3 }}
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.1, delay: 0.3 }}
+              <Link
+                className={`flex items-center gap-1   hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/projects' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+                href="/projects"
+
               >
                 PROJECTS
-              </motion.li>
-            </Link>
-            
-            <Link
-              className={`flex items-center gap-1   hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/blogs' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
-              href="/blogs"
+              </Link>
+            </motion.li>
 
+            <motion.li
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.1, delay: 0.4 }}
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.1, delay: 0.4 }}
+              <Link
+                className={`flex items-center gap-1   hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/blogs' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+                href="/blogs"
+
               >
                 BLOG
-              </motion.li>
-            </Link>
-            <Link
-              className={`hidden mdl:flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#contact' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
-              href="/#contact"
-              onClick={handleScroll}
-
+              </Link>
+            </motion.li>
+            <motion.li
+              initial={{ y: -10, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.1, delay: 0.5 }}
             >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.1, delay: 0.5 }}
+              <Link
+                className={`hidden mdl:flex items-center gap-1  hover:text-textDarkGreen dark:hover:text-textGreen  cursor-pointer duration-300 nav-link ${currentRoute === '/#contact' ? "tracking-widest text-sm md:text-lg font-extrabold dark:text-textGreen text-textDarkGreen" : "text-secondary dark:text-white  font-medium "}`}
+                href="/#contact"
+
               >
                 CONTACT
-              </motion.li>
-            </Link>
+              </Link>
+            </motion.li>
 
 
           </ul>

@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { skillsData } from "@/lib/data";
 import { motion } from "framer-motion";
 import SectionTitle from "../SectionTitle";
 import { TimeLine } from "./TimeLink";
@@ -20,20 +19,19 @@ const fadeInAnimationVariants = {
     }),
 };
 
-const Tech = () => {
-    const [highlightedSkill, setHighlightedSkill] = useState<string>('');
 
+const Tech = ({ techData }: any) => {
+    const [highlightedSkill, setHighlightedSkill] = useState<string>('');
     useEffect(() => {
-        const initialDelay = 2000; // Adjust the initial delay in milliseconds (e.g., 3000 for 3 seconds)
 
         const timeout = setTimeout(() => {
             const interval = setInterval(() => {
-                const randomSkill = skillsData[Math.floor(Math.random() * skillsData.length)];
+                const randomSkill = techData.tags[Math.floor(Math.random() * techData.tags.length)];
                 setHighlightedSkill(randomSkill);
             }, 1500);
 
             return () => clearInterval(interval);
-        }, initialDelay);
+        });
 
         return () => clearTimeout(timeout);
     }, []);
@@ -45,23 +43,17 @@ const Tech = () => {
         >
             <SectionTitle title="I KNOW" />
             <ul className="flex flex-wrap justify-center gap-4 text-lg  text-gray-800">
-                {skillsData.map((skill, index) => (
-                    <motion.li
-                        className={`  borderBlack rounded-full text-md px-5 py-1  ${skill === highlightedSkill ? 'bg-textDarkGreen text-white dark:bg-textDarkGreen duration-700' : 'dark:bg-white/10 dark:text-white/80 bg-lightMode'}`}
+                {techData.tags.map((tech: string, index: number) => {
+                    return <li
+                        className={`  borderBlack rounded-full text-md px-5 py-1  ${tech === highlightedSkill ? 'bg-textDarkGreen text-white dark:bg-textDarkGreen duration-700' : 'dark:bg-white/10 dark:text-white/80 bg-lightMode'}`}
                         key={index}
-                        variants={fadeInAnimationVariants}
-                        initial="initial"
-                        whileInView="animate"
-                        viewport={{
-                            once: true,
-                        }}
-                        custom={index}
+                  
                     >
-                        {skill}
-                    </motion.li>
-                ))}
+                        {tech}
+                    </li>
+                })}
             </ul>
-            <TimeLine />
+            <TimeLine allTimeslines={techData.allTimelines}/>
         </section>
     );
 };

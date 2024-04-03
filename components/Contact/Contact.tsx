@@ -1,5 +1,4 @@
 "use client";
-import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa"
@@ -18,7 +17,7 @@ const Contact = () => {
             <h2 className="font-titleFont text-secondary dark:text-textLight text-5xl font-semibold">Let&apos;s Connect</h2>
            
 
-            <a href="mailto:harjotsingh.5125@gmail.com">
+            <a href="mailto:harjot.programmer@gmail.com">
                 <motion.button
                     className="flex items-center justify-center gap-2 w-40 h-14 border border-textDarkGreen mt-6 font-titleFont text-sm text-textDarkGreen tracking-wider  dark:border-textGreen dark:text-textGreen rounded-md hover:bg-hoverColor duration-300"
                     onHoverStart={() => setIsHovered(true)}

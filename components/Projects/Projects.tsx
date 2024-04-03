@@ -1,17 +1,13 @@
-"use client";
 import SectionTitle from "../SectionTitle";
-import { FaArrowRight } from "react-icons/fa"
-import { motion } from "framer-motion"
-import { useState } from "react";
 import React from "react";
 import ProjectCard from "./ProjectCard";
-import { projectsData } from "@/lib/data";
-import Link from "next/link";
+import ViewAllButton from "./ViewAllButton";
+import { IProjects } from "@/lib/interface";
+import { fetchProjectData } from "@/lib/data";
 
 
-
-export default function Projects() {
-    const [isHovered, setIsHovered] = useState(false)
+const Projects = async () => {
+    const projectsData = await fetchProjectData();
     return (
         <section className="max-w-container mx-auto  lgl:px-20 py-12 lgl:py-0 text-secondary dark:text-textLight">
             <SectionTitle title="PROJECTS" />
@@ -20,27 +16,15 @@ export default function Projects() {
 
 
 
-                {projectsData.slice(0, 3).map((project) => {
+                {projectsData.map((project: IProjects) => {
+                    return (
 
-                    return <ProjectCard {...project} key={project.id} />
+                        project.featuredProject && <ProjectCard project={project} key={project.id} />
 
+                    )
                 })}
 
-                <motion.div
-                    onHoverStart={() => setIsHovered(true)}
-                    onHoverEnd={() => setIsHovered(false)}
-                >
-
-                    <Link href="/projects"
-                        className="flex gap-2 items-center text-2xl font-titleFont  text-textDarkGreen  dark:text-textGreen tracking-wide dark:hover:text-textLight transition duration-300"
-
-                    >
-                        View All
-
-                        {isHovered ? <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300 transform -rotate-45" /> : <FaArrowRight aria-label="Arrow Pointing Right" className="transition-all duration-300" />}
-
-                    </Link>
-                </motion.div>
+                <ViewAllButton />
                 {/* ============ projects End here ================== */}
             </div>
         </section>
@@ -48,3 +32,4 @@ export default function Projects() {
 };
 
 
+export default Projects

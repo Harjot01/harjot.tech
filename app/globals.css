@@ -8,6 +8,9 @@
   --tertiary: rgba(31, 209, 253, 0.6);
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   scrollbar-width: thin;
@@ -35,10 +38,6 @@
 }
 
 
-html {
-  --line-color: #e5e7eb;
-    scroll-behavior: smooth;
-}
 
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
@@ -92,4 +91,3 @@ body {
   fill: #78e2a0;
   /* Change the color to your desired color on hover */
 }
-

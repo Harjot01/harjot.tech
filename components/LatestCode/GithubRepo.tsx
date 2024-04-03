@@ -1,13 +1,14 @@
-"use client";
-
-import { useState } from "react";
+"use client"
 import RepoCard from "./RepoCard";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { GithubRepoData } from "@/lib/data";
-import React from "react";
 import SectionTitle from "../SectionTitle";
+import { IRepository } from "@/lib/interface";
 
-const GithubRepo = () => {
+
+
+
+const GithubRepo = ({ githubData }: any) => {
     const [showMore, setShowMore] = useState(false);
     let count = 0.1
 
@@ -16,23 +17,24 @@ const GithubRepo = () => {
             <div className="w-full flex flex-col items-center">
                 <SectionTitle title="LATEST CODE" />
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 mt-10 lgl:px-10">
-                {GithubRepoData.slice(0, 6).map((repo) => {
-                    return <RepoCard {...repo} key={repo.id} />
+                {githubData.slice(0, 6).map((repoData: IRepository) => {
+                    return <RepoCard repoData={repoData} key={repoData.id} />
                 })}
 
                 {showMore && (
                     <>
-                        {GithubRepoData.slice(6).map((repo) => {
+                        {githubData.slice(6).map((repoData: IRepository) => {
 
                             return <motion.div
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1 }}
                                 transition={{ delay: 0.1 + (count = count + 0.1) }}
-                                key={repo.id}
+                                key={repoData.id}
                             >
 
-                                <RepoCard title={repo.title} desc={repo.desc} link={repo.link} />
+                                <RepoCard repoData={repoData} key={repoData.id} />
 
                             </motion.div>
                         })}

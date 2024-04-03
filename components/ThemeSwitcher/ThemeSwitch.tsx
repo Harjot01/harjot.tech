@@ -1,4 +1,3 @@
-// app/components/ThemeSwitch.tsx
 'use client'
 
 import { useState, useEffect } from 'react'

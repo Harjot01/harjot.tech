@@ -10,15 +10,11 @@ interface TimeLineItem {
     text: string;
 }
 
-const TimeLineData: TimeLineItem[] = [
-    { year: 2023, text: "Started my web development journey" },
-    { year: 2022, text: "Learnt Data Structures & Algorithms" },
-    { year: 2021, text: "Started Learning C++ for Unreal Engine" },
-    { year: 2020, text: "Switched in Python to build 2D games" },
-    { year: 2019, text: "Started learning C language" }
-];
 
-export function TimeLine() {
+export const revalidate = 30;
+
+
+export function TimeLine({ allTimeslines }: any) {
     const colorMode: string = "dark";
     const [, setActiveItem] = useState<number>(0);
     const carouselRef = useRef<HTMLUListElement | null>(null);
@@ -33,7 +29,7 @@ export function TimeLine() {
 
         if (carouselRef.current) {
             const scrollLeft = Math.floor(
-                carouselRef.current.scrollWidth * 0.7 * (i / TimeLineData.length)
+                carouselRef.current.scrollWidth * 0.7 * (i / allTimeslines.length)
             );
 
             scroll(carouselRef.current, scrollLeft);
@@ -44,7 +40,7 @@ export function TimeLine() {
         if (carouselRef.current) {
             const index = Math.round(
                 (carouselRef.current.scrollLeft / (carouselRef.current.scrollWidth * 0.7)) *
-                TimeLineData.length
+                allTimeslines.length
             );
 
             setActiveItem(index);
@@ -73,7 +69,7 @@ export function TimeLine() {
                 className="pt-20 text-center flex flex-row overflow-y-hidden flex-nowrap gap-5 justify-between overflow-x-hidden snap-x cursor-pointer hide-scroll-bar"
             >
                 <>
-                    {TimeLineData.map((item, index) => {
+                    {allTimeslines.map((timelineObj: any, index: number) => {
                         return (
                             <li
                                 id={`carousel__item-${index}`}
@@ -90,10 +86,10 @@ export function TimeLine() {
                                 }}
                             >
                                 <h3
-                                    aria-label={"What do I do in " + item.year}
+                                    aria-label={"What do I do in " + timelineObj.year}
                                     className="flex items-center gap-4 text-2xl font-bold"
                                 >
-                                    {`${item.year}`}
+                                    {`${timelineObj.year}`}
                                     <svg
                                         width="208"
                                         height="6"
@@ -123,7 +119,7 @@ export function TimeLine() {
                                     </svg>
                                 </h3>
                                 <p className="tracking-wide">
-                                    {item.text}
+                                    {timelineObj.skill}
                                 </p>
                             </li>
                         );
