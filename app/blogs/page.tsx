@@ -15,7 +15,7 @@ export const revalidate = 30
 const Blogs = async () => {
     const blogData = await fetchBlogData();
     return (
-        <section className="w-full mt-16  sm:mt-24  md:mt-32 px-5 sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center">
+        <section id="blogs" className="w-full mt-16  sm:mt-24  md:mt-32 px-5 sm:px-10 md:px-24  sxl:px-32 flex flex-col items-center justify-center">
             <div className="flex  justify-between">
                 <h1 className="text-5xl mb-10 mx-auto font-bold text-secondary dark:text-textLight">Blog Posts</h1>
             </div>
