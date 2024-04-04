@@ -35,7 +35,7 @@ const Banner = ({ aboutData }: any) => {
 
     return (
         <section
-            id="hero"
+            id="home"
             className="max-w-contentContainer mx-auto md:my-20 lg:my-28 flex flex-col-reverse lg:flex-row gap-4 lgl:gap-8 mdl:px-10 xl:px-0 justify-between"
         >
             <div className="w-full text-left ">

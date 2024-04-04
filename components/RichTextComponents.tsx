@@ -23,10 +23,10 @@ export const RichTextComponents = {
         ),
     },
     block: {
-        h1: ({ children }: any) => React.createElement('h1', { className: "text-5xl py-10 font-bold" }, children),
-        h2: ({ children }: any) => React.createElement('h2', { className: "text-4xl py-10 font-bold" }, children),
-        h3: ({ children }: any) => React.createElement('h3', { className: "text-3xl py-10 font-bold" }, children),
-        h4: ({ children }: any) => React.createElement('h4', { className: "text-2xl py-10 font-bold" }, children),
+        h1: ({ children }: any) => React.createElement('h1', { className: "text-4xl py-10 font-bold" }, children),
+        h2: ({ children }: any) => React.createElement('h2', { className: "text-3xl py-10 font-bold" }, children),
+        h3: ({ children }: any) => React.createElement('h3', { className: "text-2xl py-10 font-bold" }, children),
+        h4: ({ children }: any) => React.createElement('h4', { className: "text-xl py-10 font-bold" }, children),
         blockquote: ({ children }: any) => React.createElement('blockquote', { className: "border-l-textGreen border-l-4 pl-5 py-5 my-5" }, children),
     },
     marks: {

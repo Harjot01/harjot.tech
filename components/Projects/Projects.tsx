@@ -9,7 +9,7 @@ import { fetchProjectData } from "@/lib/data";
 const Projects = async () => {
     const projectsData = await fetchProjectData();
     return (
-        <section className="max-w-container mx-auto  lgl:px-20 py-12 lgl:py-0 text-secondary dark:text-textLight">
+        <section id="projects" className="max-w-container mx-auto  lgl:px-20 py-12 lgl:py-0 text-secondary dark:text-textLight">
             <SectionTitle title="PROJECTS" />
             {/* ============ projects Start here ================ */}
             <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">

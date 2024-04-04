@@ -16,20 +16,14 @@ const Home = async () => {
 
   return (
     <>
-      <div className="w-full h-[88vh] xl:flex items-center gap-20 justify-between">
-
-
-        <div className="h-[88vh] mx-auto p-4">
-          <Banner aboutData={aboutData} />
-          <Tech techData={techData} />
-          <Projects />
-          <GithubRepo githubData={githubData} />
-          <Contact />
-
-        </div>
+      <div className=" mx-auto p-4">
+        <Banner aboutData={aboutData} />
+        <Tech techData={techData} />
+        <Projects />
+        <GithubRepo githubData={githubData} />
+        <Contact />
 
       </div>
-
     </>
   );
 }
