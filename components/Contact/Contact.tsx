@@ -14,7 +14,7 @@ const Contact = () => {
             <p className="font-titleFont text-lg text-textDarkGreen dark:text-textGreen font-semibold flex items-center tracking-wide">
                 Have a Query?
             </p>
-            <h2 className="font-titleFont text-secondary dark:text-textLight text-5xl font-semibold">Let&apos;s Connect</h2>
+            <h2 className="font-titleFont text-secondary dark:text-textLight text-5xl font-semibold">Ping Me</h2>
            
 
             <a href="mailto:harjot.programmer@gmail.com">
